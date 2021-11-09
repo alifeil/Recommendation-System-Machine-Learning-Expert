@@ -71,7 +71,7 @@ Rumus diatas menjelaskan :
 - Σ adalah diagonal matriks yang mengandung singular (eigen) nilai.
 - V adalah matriks singular kanan (kolom adalah vektor singular kanan). V kolom berisi vektor eigen dari matriks M ᵗ M2. 
 
-**2. Algoritma K — Nearest Neighbors**
+**2. Algoritma K-Nearest Neighbors**
 Algoritma KNN mengasumsikan bahwa hal serupa ada dalam jarak dekat. Dengan kata lain, hal-hal serupa dekat satu sama lain.(diterjemahkan dari [[2](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)]) Algoritma KNN dapat dilihat pada gambar dibawah ini :
  
  <p align="center">
@@ -100,15 +100,15 @@ Tabel dibawah ini merupakan informasi dari dataset yang digunakan :
 
 Gambar dibawah ini merupakan pratinjau dari dataset pada berkas :
 
-**1. Rating  <code>ratings_small.csv</code>**
+**1. Dataset Rating  <code>ratings_small.csv</code>**
 
 ![dataset rating](https://user-images.githubusercontent.com/83399671/140977427-2ac96d0c-7cc4-4fa0-92ac-18bf896460d0.png)
 
-**2. Judul <code>movies_metadata.csv</code>**
+**2. Dataset Judul <code>movies_metadata.csv</code>**
 
 ![dataset judul](https://user-images.githubusercontent.com/83399671/140977918-7856ef6d-2888-4468-98be-88287e9d796c.png)
 
-**3. Menggabungkan 2 dataset**
+**3. Menggabungkan 2 dataset yaitu Rating dan Judul**
 
 ![penggabungan dataset](https://user-images.githubusercontent.com/83399671/140978178-c446ff97-5388-4367-a71b-1fad0cc23399.png)
 
@@ -164,7 +164,7 @@ Setelah dilakukan pra-pemrosesan data, selanjutnya adalah membuat sistem rekomen
 
 Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid, iid, r_ui, est, details, dan reason. Reason akan ada jika hasil details menunjkan ‘True’.
 
-**2. K — Nearest Neighbors (KNN)**
+**2. K-Nearest Neighbors (KNN)**
 
 Model ini dibangun mnggunakan _library surprise_ didapatkan dari `from surprise import KNNBasic`, pada metode KNNBasic, penggunaan fungsi similarity dapat diaplikasikan.
 
@@ -185,7 +185,7 @@ Pengujian dilakukan untuk menguji model dalam melakukan prediksi merekomendasika
 
 Dari hasil keluaran contoh gambar diatas menunjukan bahwa memiliki kemungkinan untuk direkomendasikan kepada uid (userId) ‘1’ pada iid (filmId) ‘5’.
 
-**2. K — Nearest Neighbors (KNN)**
+**2. K-Nearest Neighbors (KNN)**
 
 ![pengujian knn](https://user-images.githubusercontent.com/83399671/140983494-abd0a5a3-b1b2-44b7-b8af-94ee144984ee.png)
 
@@ -196,13 +196,13 @@ Dari hasil keluaran contoh gambar diatas menunjukkan bahwa username uid (userId)
 
 ## Evaluation
 
-Evaluasi dilakukan untuk mengetahui peforma akurasi dan error yang terjadi. Metode evaluasi yang digunakan meliputi RMSE, MAE, dan FCP untuk kedua algoritima yang digunakan, metode tersebut didapatkan dari library surprise yang dipanggil dengan menuliskan `from surprise import accuracy`
+Evaluasi dilakukan untuk mengetahui peforma akurasi dan error yang terjadi. Metode evaluasi yang digunakan meliputi RMSE, MAE, dan FCP untuk kedua algoritima yang digunakan, metode tersebut didapatkan dari library surprise yang dipanggil dengan menuliskan `from surprise import accuracy`.
 
 **1. Singular Value Decomposition (SVD)**
 
 ![evaluasi svd](https://user-images.githubusercontent.com/83399671/140984267-806adc7a-f061-4882-8f68-11312037a0a9.png)
    
-**2. K — Nearest Neighbors (KNN)**
+**2. K-Nearest Neighbors (KNN)**
 
 ![evaluasi knn](https://user-images.githubusercontent.com/83399671/140984354-d17d65bb-9bc6-4c0e-b254-7e3c9cbd7020.png)
 
