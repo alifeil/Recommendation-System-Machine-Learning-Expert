@@ -145,7 +145,7 @@ Terakhir, kumpulan gambar dibawah ini merupakan visualisasi data dari dataset ya
 
 Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data :
 
--   Menggabungkan dua data set antara rating dan judul untuk mengambil satu fitur kolom `title` di dataset judul diperuntukan mengetahui judul film dari dataset lainnya dan kolom tersebut digabungkan dengan dataset rating.
+-   Menggabungkan dua data set antara rating dan judul untuk mengambil satu fitur kolom `title` di dataset judul diperuntukan mengetahui judul film dari dataset movies_metadata.csv dan kolom tersebut digabungkan dengan dataset rating.
 
 -   Melakukan **pembagian dataset** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
 Pengujian performa model pada data sebenarnya, maka perlu dilakukan pembagian dataset kedalam dua atau tiga bagian. Pada proyek ini dilakukan dua bagian saja yakni pada data latih dan data uji dengan rasio 80:20. Data latih dilakukan sepenuhnya untuk melatih model, sedangkan data uji merupakan data yang belum pernah dilihat oleh model dan diharapkan model dapat memiliki performa yang sama baiknya pada data uji seperti pada data latih.Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn
