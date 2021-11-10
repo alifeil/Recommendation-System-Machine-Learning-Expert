@@ -170,7 +170,7 @@ Model ini dibangun mnggunakan _library surprise_ didapatkan dari `from surprise 
 
 ![model knn](https://user-images.githubusercontent.com/83399671/140981446-a71a8fa2-c129-4473-8e52-5bdcb504f160.png)
 
-Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid, iid, r_ui, est, details, dan reason. Reason akan ada jika hasil details menunjkan ‘True’.
+Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid, iid, r_ui, est, details, dan reason. Reason akan ada jika hasil details menunjukkan ‘True’.
 
 
 [← Kembali ke Daftar Isi](#daftar-isi)
@@ -183,7 +183,7 @@ Pengujian dilakukan untuk menguji model dalam melakukan prediksi merekomendasika
 
 ![pengujian svd](https://user-images.githubusercontent.com/83399671/140982751-3b5bd0c6-1500-4b4b-87d6-467fc29bb1bf.png)
 
-Dari hasil keluaran contoh gambar diatas menunjukan bahwa memiliki kemungkinan untuk direkomendasikan kepada uid (userId) ‘1’ pada iid (filmId) ‘5’.
+Dari hasil keluaran contoh gambar diatas menunjukkan bahwa memiliki kemungkinan untuk direkomendasikan kepada uid (userId) ‘1’ pada iid (filmId) ‘5’.
 
 **2. K-Nearest Neighbors (KNN)**
 
