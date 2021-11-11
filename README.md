@@ -55,6 +55,8 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
 -   Kemudian untuk sistem rekomendasi yang dibuat, dipilih sistem rekomendasi _collaborative filtering_ karena sesuai dengan datasetnya. Sehingga sistem rekomendasi dibuat untuk memberikan rekomendasi opini dari pengguna lain yang ada digunakan untuk memprediksi item yang mungkin disukai/diminati oleh seorang pengguna. Beberapa algoritma yang digunakan untuk membuat sistem rekomendasi di proyek ini diantaranya :
 
 **1. Algoritma Singular Value Decomposition (SVD)**
+
+
 Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk Collaborative Filtering di sistem rekomendasi. Singular Value Decomposition (SVD) adalah metode faktorisasi matriks yang menggeneralisasikan dekomposisi eigen dari matriks persegi (nxn) ke matriks apa pun (nxm).(diterjemahkan dari [[2](https://towardsdatascience.com/simple-svd-algorithms-13291ad2eef2)]) Algoritma SVD dapat dilihat pada gambar dibawah ini:
    
    <p align="center">
@@ -72,6 +74,8 @@ Rumus diatas menjelaskan :
 - V adalah matriks singular kanan (kolom adalah vektor singular kanan). V kolom berisi vektor eigen dari matriks M ᵗ M2. 
 
 **2. Algoritma K-Nearest Neighbors**
+
+
 Algoritma KNN mengasumsikan bahwa hal serupa ada dalam jarak dekat. Dengan kata lain, hal-hal serupa dekat satu sama lain.(diterjemahkan dari [[2](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)]) Algoritma KNN dapat dilihat pada gambar dibawah ini :
  
  <p align="center">
@@ -110,6 +114,9 @@ Terdapat 6 buah dataset dari [The Movies Dataset](https://www.kaggle.com/rounakb
 | userId              | Variabel yang mengarah pada bagian spesifik dari pengguna (kode unik)                     |
 | movieId             | Variabel yang mengarah pada bagian spesifik dari film (kode unik)                         |
 | rating              | Variabel peringkat yang diberikan pengguna.                                               |
+| timestamp           | Variabel yang menunjukkan waktu pengguna memberikan rating                                |
+
+Dapat terlihat pada gambar dibawah ini :
  
 ![dataset rating](https://user-images.githubusercontent.com/83399671/140977427-2ac96d0c-7cc4-4fa0-92ac-18bf896460d0.png)
 
@@ -132,6 +139,7 @@ Dataset Film yaitu melakukan penggabungan 2 dataset yaitu Peringkat dan Judul ya
 | userId              | Variabel yang mengarah pada bagian spesifik dari pengguna (kode unik)                     |
 | movieId             | Variabel yang mengarah pada bagian spesifik dari film (kode unik)                         |
 | rating              | Variabel peringkat yang diberikan pengguna.                                               |
+| timestamp           | Variabel yang menunjukkan waktu pengguna memberikan rating                                |
 | title               | Variabel judul dari setiap film                                                           |
 
 ![penggabungan dataset](https://user-images.githubusercontent.com/83399671/140978178-c446ff97-5388-4367-a71b-1fad0cc23399.png)
