@@ -124,9 +124,12 @@ Dapat terlihat pada gambar dibawah ini :
 
 Dataset Judul terdiri dari kolom adult, belongs_to_collection,	budget,	genres,	homepage,	id,	imdb_id,	original_language,	original_title,	overview,	popularity,	poster_path, production_companies,	production_countries,	release_date,	revenue,	runtime,	spoken_languages,	status,	tagline,	title,	video,	vote_average,	vote_count. Dalam proyek ini kolom yang digunakan hanya kolom  `title`, dibawah ini adalah uraian dari kolom `title` :
 
+
 | Kolom               | Deskripsi                                                                                 |
 | --------------------| ------------------------------------------------------------------------------------------|
 | title               | Variabel judul dari setiap film                                                           |
+
+Dapat terlihat pada gambar dibawah ini :
 
 ![dataset judul](https://user-images.githubusercontent.com/83399671/140977918-7856ef6d-2888-4468-98be-88287e9d796c.png)
 
@@ -141,6 +144,8 @@ Dataset Film yaitu melakukan penggabungan 2 dataset yaitu Peringkat dan Judul ya
 | rating              | Variabel peringkat yang diberikan pengguna.                                               |
 | timestamp           | Variabel yang menunjukkan waktu pengguna memberikan rating                                |
 | title               | Variabel judul dari setiap film                                                           |
+
+Dapat terlihat pada gambar dibawah ini :
 
 ![penggabungan dataset](https://user-images.githubusercontent.com/83399671/140978178-c446ff97-5388-4367-a71b-1fad0cc23399.png)
 
@@ -204,7 +209,8 @@ Pada gambar diatas terlihat kolom yang digunakan adalah kolom userId, movieId, d
 Penggunaan library surprsieuntuk algoritma SVD dapat dilihat pada gambar dibawah ini :
   
   ![pembuatan model svd](https://user-images.githubusercontent.com/83399671/141350041-62c2f6d4-3e15-4f7a-bf40-85377d6ada99.png)
-  Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid (id Pengguna), iid (id sebuah barang/item), r_ui (peringkat yang digunakan oleh pengguna), est (peringkat yang diperkirakan oleh model), details (penjelasan yang menunjuk ke reason), dan reason. Reason akan ada jika hasil details menunjukan ‘True’.
+  
+Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid (id Pengguna), iid (id sebuah barang/item), r_ui (peringkat yang digunakan oleh pengguna), est (peringkat yang diperkirakan oleh model), details (penjelasan yang menunjuk ke reason), dan reason. Reason akan ada jika hasil details menunjukan ‘True’.
  
 **2.2. Rekomendasi SVD**
 
@@ -214,7 +220,7 @@ Rekomendasi SVD yang digunakan melakukan pemanggilan terhadap userId = 12. Gamba
 
 Terlihat pada gambar diatas pengguna nomor 12 sudah memberikan rating untuk 61 film. Untuk top-15 rekomendasi film dengan pemberian rating dari userId = 12 dapat dilihat pada gambar dibawah ini :
 
-![top 15 rekomendasi svd](https://user-images.githubusercontent.com/83399671/141350946-9c7d30fb-5ec0-4260-a66d-0724be1d6dfd.png)
+![top 15 rekomendasi svd](https://user-images.githubusercontent.com/83399671/141352727-f11530ea-4ed8-4462-aad0-026c9fce1102.png)
 
 Terlihat pada gambar diatas hasil top-15 rekomendasi film dengan pemberian rating dari userId = 12, kolom yang tersedia terdiri dari : userId, movieId, rating, timestamp, dan	title.
 
@@ -232,7 +238,7 @@ Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang diha
 
 ## Testing
 
-Pengujian dilakukan untuk menguji model dalam melakukan prediksi merekomendasikan data dari data film. Dibawah ini akan dijelaskan pengujian untuk model Singular Value Decomposition (SVD) dan K — Nearest Neighbors (KNN).
+Pengujian dilakukan untuk menguji model dalam melakukan prediksi merekomendasikan data dari data film. Dibawah ini akan dijelaskan pengujian untuk model Singular Value Decomposition (SVD) dan K-Nearest Neighbors (KNN).
 
 **1. Singular Value Decomposition (SVD)**
 
