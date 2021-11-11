@@ -98,32 +98,43 @@ Tabel dibawah ini merupakan informasi dari dataset yang digunakan :
 | Rating Penggunaan       | 8.2 (Gold)                                                                                      |
 | Jenis dan Ukuran Berkas | zip (227.8 MB)                                                                                  |
 
-Gambar dibawah ini merupakan pratinjau dari dataset pada berkas :
+Terdapat 6 buah dataset dari [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset) yaitu : `movies_metadata.csv`, `keywords.csv`, `credits.csv`, `links.csv`, `links_small.csv`, dan `ratings_small.csv`. Pada proyek ini yang digunakan adalah dataset  `ratings_small.csv` dan `movies_metadata.csv`.
 
-**1. Dataset Rating  <code>ratings_small.csv</code>**
 
+**1. Dataset Peringkat** `ratings_small.csv `
+
+ Dataset peringkat terdiri dari kolom userId, movieId, dan Rating. Dalam proyek ini semua kolom digunakan, dibawah ini adalah uraian dari setiap kolom :
+ 
+| Kolom               | Deskripsi                                                                                 |
+| --------------------| ------------------------------------------------------------------------------------------|
+| userId              | Variabel yang mengarah pada bagian spesifik dari pengguna (kode unik)                     |
+| movieId             | Variabel yang mengarah pada bagian spesifik dari film (kode unik)                         |
+| rating              | Variabel peringkat yang diberikan pengguna.                                               |
+ 
 ![dataset rating](https://user-images.githubusercontent.com/83399671/140977427-2ac96d0c-7cc4-4fa0-92ac-18bf896460d0.png)
 
-**2. Dataset Judul <code>movies_metadata.csv</code>**
+**2. Dataset Judul** `movies_metadata.csv`
+
+Dataset Judul terdiri dari kolom adult, belongs_to_collection,	budget,	genres,	homepage,	id,	imdb_id,	original_language,	original_title,	overview,	popularity,	poster_path, production_companies,	production_countries,	release_date,	revenue,	runtime,	spoken_languages,	status,	tagline,	title,	video,	vote_average,	vote_count. Dalam proyek ini kolom yang digunakan hanya kolom  `title`, dibawah ini adalah uraian dari kolom `title` :
+
+| Kolom               | Deskripsi                                                                                 |
+| --------------------| ------------------------------------------------------------------------------------------|
+| title               | Variabel judul dari setiap film                                                           |
 
 ![dataset judul](https://user-images.githubusercontent.com/83399671/140977918-7856ef6d-2888-4468-98be-88287e9d796c.png)
 
-**3. Menggabungkan 2 dataset yaitu Rating dan Judul**
+**3. Dataset Film : Menggabungkan 2 dataset yaitu Peringkat dan Judul**
+
+Dataset Film yaitu melakukan penggabungan 2 dataset yaitu Peringkat dan Judul yang terdiri dari kolom : userId, movieId, rating dan title. Dibawah ini adalah uraian  dataset setelah digabungkan :
+
+| Kolom               | Deskripsi                                                                                 |
+| --------------------| ------------------------------------------------------------------------------------------|
+| userId              | Variabel yang mengarah pada bagian spesifik dari pengguna (kode unik)                     |
+| movieId             | Variabel yang mengarah pada bagian spesifik dari film (kode unik)                         |
+| rating              | Variabel peringkat yang diberikan pengguna.                                               |
+| title               | Variabel judul dari setiap film                                                           |
 
 ![penggabungan dataset](https://user-images.githubusercontent.com/83399671/140978178-c446ff97-5388-4367-a71b-1fad0cc23399.png)
-
-
- Berikut ini adalah uraian variabel dari setiap kolom pada dataset :
-
-1. Kolom <code>userId</code> merupakan variabel yang mengarah pada bagian spesifik dari pengguna (kode unik).
-
-2. Kolom <code>movieId</code> merupakan variabel yang mengarah pada bagian spesifik dari film (kode unik).
-
-3. Kolom <code>rating</code> merupakan kolom peringkat yang diberikan pengguna.
-
-4. Kolom <code>timestamp</code> merupakan kolom waktu melakukan penilaian pengguna.
-
-5. Kolom <code>title</code> merupakan kolom judul film.
 
 Terakhir, kumpulan gambar dibawah ini merupakan visualisasi data dari dataset yang digunakan  :
 
@@ -131,13 +142,19 @@ Terakhir, kumpulan gambar dibawah ini merupakan visualisasi data dari dataset ya
 
 ![data kosong](https://user-images.githubusercontent.com/83399671/140979276-6260c313-7a10-4a4a-945f-e89429e6eb8a.png)
 
+Gambar diatas adalah visualisasi data kosong yang terdapat pada dataset film.
+
 -   Visualisasi korelasi antar kolom
 
 ![korelasi antar kolom](https://user-images.githubusercontent.com/83399671/140979381-1db1db6b-d3d0-412c-9444-86a16492941b.png)
 
+Gambar diatas adalah visualisasi data korelasi antar kolom pada dataset film
+
 -   Visualisasi data berdasarkan rating
 
 ![rating](https://user-images.githubusercontent.com/83399671/140979470-ba5ca1f8-ea04-4a46-b1d4-4e657c0bfd06.png)
+
+Gambar diatas adalah visualisasi data berdasarkan rating pada dataset film.
 
 [← Kembali ke Daftar Isi](#daftar-isi)
 
@@ -145,7 +162,7 @@ Terakhir, kumpulan gambar dibawah ini merupakan visualisasi data dari dataset ya
 
 Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data :
 
--   Menggabungkan dua data set antara rating dan judul untuk mengambil satu fitur kolom `title` di dataset judul diperuntukan mengetahui judul film dari dataset movies_metadata.csv dan kolom tersebut digabungkan dengan dataset rating.
+-   Menggabungkan dua data set antara rating dan judul untuk mengambil satu fitur kolom `title` di dataset judul diperuntukan mengetahui judul film dari dataset movies_metadata.csv dan kolom tersebut digabungkan dengan dataset rating menghasilkan dataset baru yang diberi nama `dataset film`.
 
 -   Melakukan **pembagian dataset** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
 Pengujian performa model pada data sebenarnya, maka perlu dilakukan pembagian dataset kedalam dua atau tiga bagian. Pada proyek ini dilakukan dua bagian saja yakni pada data latih dan data uji dengan rasio 80:20. Data latih dilakukan sepenuhnya untuk melatih model, sedangkan data uji merupakan data yang belum pernah dilihat oleh model dan diharapkan model dapat memiliki performa yang sama baiknya pada data uji seperti pada data latih.Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn
@@ -154,15 +171,45 @@ Pengujian performa model pada data sebenarnya, maka perlu dilakukan pembagian da
 
 ## Modeling
 
-Setelah dilakukan pra-pemrosesan data, selanjutnya adalah membuat sistem rekomendasi _collaborative filtering_. Model yang dibuat menggunakan library surprise, library surprise berasal dari scikit Python yang digunakan untuk membangun dan menganalisis sistem rekomendasi yang menangani data peringkat eksplisit. [[Library Surprise](http://surpriselib.com/)]
+Setelah dilakukan pra-pemrosesan data, selanjutnya adalah membuat sistem rekomendasi _collaborative filtering_. Model yang dibuat menggunakan library surprise, library surprise berasal dari scikit Python yang digunakan untuk membangun dan menganalisis sistem rekomendasi yang menangani data peringkat eksplisit. [[Library Surprise](http://surpriselib.com/)]. Sebelum membuat model ada dua tahapan terlebih dahulu yaitu : mempersiapkan kolom untuk framework surprise dan pembagian data dengan train_test_split.
+
+- Mempersiapkan kolom untuk framework surprise
+
+![framework surprise](https://user-images.githubusercontent.com/83399671/141349490-4b9977ef-9555-4f7a-aa34-1d8af260dfc9.png)
+
+Pada gambar diatas terlihat kolom yang digunakan adalah kolom userId, movieId, dan rating.
+
+- Pembagian data dengan dengan train_test_split 
+
+![train test split](https://user-images.githubusercontent.com/83399671/141349670-559b1e5c-c95e-476a-bdce-848856266dbc.png)
+
+ Pada gambar diatas pembagian dataset menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
+ 
+ Setelah tahapan ini baru masuk kedalam tahapan pembuatan model SVD dan KNN yang akan dijelaskan berikut ini :
 
 **1. Singular Value Decomposition (SVD)**
 
   Model ini dibangun menggunakan _library surprise_ yang menggunakan metode matrix factorization.
-   
-   ![model svd](https://user-images.githubusercontent.com/83399671/140980669-0bcd527d-ffe4-4cba-94bb-46c23e3a617c.png)
+  
+**1.1. Penggunaan library surprise untuk algoritma SVD**
 
-Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid, iid, r_ui, est, details, dan reason. Reason akan ada jika hasil details menunjkan ‘True’.
+Penggunaan library surprsieuntuk algoritma SVD dapat dilihat pada gambar dibawah ini :
+  
+  ![pembuatan model svd](https://user-images.githubusercontent.com/83399671/141350041-62c2f6d4-3e15-4f7a-bf40-85377d6ada99.png)
+  Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid (id Pengguna), iid (id sebuah barang/item), r_ui (peringkat yang digunakan oleh pengguna), est (peringkat yang diperkirakan oleh model), details (penjelasan yang menunjuk ke reason), dan reason. Reason akan ada jika hasil details menunjukan ‘True’.
+ 
+**2.2. Rekomendasi SVD**
+
+Rekomendasi SVD yang digunakan melakukan pemanggilan terhadap userId = 12. Gambar dapat dilihat dibawah ini :
+
+![pemanggilan rekomendasi user id 12](https://user-images.githubusercontent.com/83399671/141350725-1363fe50-9f63-4073-b189-bddfcf31c275.png)
+
+Terlihat pada gambar diatas pengguna nomor 12 sudah memberikan rating untuk 61 film. Untuk top-15 rekomendasi film dengan pemberian rating dari userId = 12 dapat dilihat pada gambar dibawah ini :
+
+![top 15 rekomendasi svd](https://user-images.githubusercontent.com/83399671/141350946-9c7d30fb-5ec0-4260-a66d-0724be1d6dfd.png)
+
+Terlihat pada gambar diatas hasil top-15 rekomendasi film dengan pemberian rating dari userId = 12, kolom yang tersedia terdiri dari : userId, movieId, rating, timestamp, dan	title.
+
 
 **2. K-Nearest Neighbors (KNN)**
 
@@ -170,7 +217,7 @@ Model ini dibangun mnggunakan _library surprise_ didapatkan dari `from surprise 
 
 ![model knn](https://user-images.githubusercontent.com/83399671/140981446-a71a8fa2-c129-4473-8e52-5bdcb504f160.png)
 
-Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid, iid, r_ui, est, details, dan reason. Reason akan ada jika hasil details menunjukkan ‘True’.
+Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari :  uid (id Pengguna), iid (id sebuah barang/item), r_ui (peringkat yang digunakan oleh pengguna), est (peringkat yang diperkirakan oleh model), details (penjelasan yang menunjuk ke reason), dan reason. Reason akan ada jika hasil details menunjukkan ‘True’.
 
 
 [← Kembali ke Daftar Isi](#daftar-isi)
@@ -204,10 +251,13 @@ Evaluasi dilakukan untuk mengetahui peforma akurasi dan error yang terjadi. Meto
    
 **2. K-Nearest Neighbors (KNN)**
 
-![evaluasi knn](https://user-images.githubusercontent.com/83399671/140984354-d17d65bb-9bc6-4c0e-b254-7e3c9cbd7020.png)
-
+![evaluasi knn2](https://user-images.githubusercontent.com/83399671/141351409-7a695e4f-9ca6-47e7-884d-b671356ed74b.png)
 
 [← Kembali ke Daftar Isi](#daftar-isi)
+
+## Kesimpulan
+
+Disimpulkan bahwa penggunaan metode collaborative filtering dapat memberikan suatu saran rekomendasi kepada pengguna secara efektif, baik menggunakan algoritma KNN maupun menggunakan SVD dengan metode matrix factorization. 
 
 # Referensi
 
