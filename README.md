@@ -212,7 +212,7 @@ Penggunaan library surprsieuntuk algoritma SVD dapat dilihat pada gambar dibawah
   
 Terlihat dari gambar diatas model diatas terdapat  6 variabel prediksi yang dihasilkan yang terdiri dari : uid (id Pengguna), iid (id sebuah barang/item), r_ui (peringkat yang digunakan oleh pengguna), est (peringkat yang diperkirakan oleh model), details (penjelasan yang menunjuk ke reason), dan reason. Reason akan ada jika hasil details menunjukan ‘True’.
  
-**2.2. Rekomendasi SVD**
+**1.2. Rekomendasi SVD**
 
 Rekomendasi SVD yang digunakan melakukan pemanggilan terhadap userId = 12. Gambar dapat dilihat dibawah ini :
 
